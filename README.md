@@ -152,9 +152,13 @@ For hosting a website, a carefully designed partitioning scheme ensures performa
 
 ### **Q5. Enlist 10 Useful Commands in Linux for System and Hardware Information**
 
+Linux offers several commands to gather detailed information about the system and hardware. Here are **10 essential commands**, their usage, and sample outputs.
+
 ---
 
 #### **Command 1: uname**
+**Purpose**: Displays system information, such as kernel version, system architecture, and OS type.
+
 ```bash
 aftab@linux:~$ uname -a
 ```
@@ -166,6 +170,8 @@ Linux aftab-server 5.15.0-46-generic #49-Ubuntu SMP Thu Sep 7 23:48:32 UTC 2023 
 ---
 
 #### **Command 2: lsblk**
+**Purpose**: Lists information about block storage devices, including disks and partitions.
+
 ```bash
 aftab@linux:~$ lsblk -f
 ```
@@ -182,6 +188,8 @@ sda                      500G
 ---
 
 #### **Command 3: df**
+**Purpose**: Displays disk space usage for all mounted filesystems.
+
 ```bash
 aftab@linux:~$ df -hT
 ```
@@ -196,6 +204,8 @@ Filesystem     Type  Size  Used Avail Use% Mounted on
 ---
 
 #### **Command 4: free**
+**Purpose**: Displays memory usage, including RAM and swap space.
+
 ```bash
 aftab@linux:~$ free -m
 ```
@@ -205,3 +215,116 @@ aftab@linux:~$ free -m
 Mem:          7989        1234        5467         213        1287        6312
 Swap:         4096           0        4096
 ```
+
+---
+
+#### **Command 5: lscpu**
+**Purpose**: Displays detailed information about the CPU architecture, such as cores, threads, and speed.
+
+```bash
+aftab@linux:~$ lscpu
+```
+**Output**:
+```plaintext
+Architecture:           x86_64
+CPU(s):                 4
+Thread(s) per core:     2
+Core(s) per socket:     2
+Model name:             Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz
+```
+
+---
+
+#### **Command 6: dmesg**
+**Purpose**: Prints messages from the kernel ring buffer, useful for debugging hardware or system errors.
+
+```bash
+aftab@linux:~$ dmesg | tail -5
+```
+**Output**:
+```plaintext
+[   32.545678] EXT4-fs (sda2): mounted filesystem with ordered data mode.
+[   32.678909] systemd: Starting Apache Web Server...
+[   33.890123] NetworkManager: connection 'webserver' activated.
+[   34.123456] CRON[3456]: (aftab) CMD (/usr/bin/php /srv/public_html/index.php)
+[   34.789012] systemd: Startup finished in 1.5 seconds.
+```
+
+---
+
+#### **Command 7: lspci**
+**Purpose**: Lists all PCI devices, such as network cards, GPUs, and storage controllers.
+
+```bash
+aftab@linux:~$ lspci
+```
+**Output**:
+```plaintext
+00:00.0 Host bridge: Intel Corporation 7 Series Chipset
+00:02.0 VGA compatible controller: Intel HD Graphics 4000
+00:1a.0 USB controller: Intel Corporation USB Enhanced Host Controller
+```
+
+---
+
+#### **Command 8: lsusb**
+**Purpose**: Lists USB devices connected to the system.
+
+```bash
+aftab@linux:~$ lsusb
+```
+**Output**:
+```plaintext
+Bus 002 Device 002: ID 8087:0024 Intel Corp. Integrated Rate Matching Hub
+Bus 003 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+Bus 003 Device 002: ID 046d:c534 Logitech USB Receiver
+```
+
+---
+
+#### **Command 9: cat /proc/cpuinfo**
+**Purpose**: Displays detailed CPU information, including vendor, model, speed, and cache size.
+
+```bash
+aftab@linux:~$ cat /proc/cpuinfo | grep "model name"
+```
+**Output**:
+```plaintext
+model name  : Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz
+```
+
+---
+
+#### **Command 10: cat /proc/meminfo**
+**Purpose**: Displays detailed memory statistics such as total and available memory.
+
+```bash
+aftab@linux:~$ cat /proc/meminfo
+```
+**Output**:
+```plaintext
+MemTotal:        7989740 kB
+MemFree:         5467240 kB
+MemAvailable:    6312740 kB
+Buffers:          123456 kB
+Cached:          1287544 kB
+SwapTotal:       4096000 kB
+SwapFree:        4096000 kB
+```
+
+---
+
+#### **Summary Table of Commands**
+| **Command**           | **Purpose**                                  |
+|------------------------|----------------------------------------------|
+| `uname`               | Kernel and system information.              |
+| `lsblk`               | Lists block storage devices.                |
+| `df`                  | Shows disk space usage.                     |
+| `free`                | Displays memory usage.                      |
+| `lscpu`               | CPU architecture and details.               |
+| `dmesg`               | Kernel messages and logs.                   |
+| `lspci`               | Lists PCI devices (network, GPUs, etc.).    |
+| `lsusb`               | Lists connected USB devices.                |
+| `cat /proc/cpuinfo`   | CPU-specific details.                       |
+| `cat /proc/meminfo`   | Memory-specific details.                    |
+
