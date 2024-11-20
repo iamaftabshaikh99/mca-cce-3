@@ -681,7 +681,3 @@ The `rem` unit stands for "root em" and is relative to the font size of the root
 #### **Output**
 1. The `<h1>` font size is 32px (`2rem`).
 2. The `<p>` font size is 16px (`1rem`).
-
----
-
-This completes all 15 questions with the agreed structure, ensuring clarity and adherence to academic expectations. Let me know if anything needs refinement!
