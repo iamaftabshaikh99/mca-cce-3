@@ -100,7 +100,6 @@ While the `root` user has comprehensive control over the system, using `sudo` is
 
 **Q3: Explain the process of user management in Linux with suitable examples. Also describe the purpose and structure of `/etc/passwd`.**
 
-**Elaborated Answer:**
 
 User management in Linux involves creating, modifying, and deleting user accounts to control access to system resources. Proper user management ensures system security and efficient resource utilization.
 
@@ -303,7 +302,6 @@ The `uniq` and `sort` commands are powerful tools for text processing in Linux. 
 
 ### **Q5: Explain the usage of the following commands: `du`, `df`, `free`, `touch`, `stat`**
 
-**Elaborated Answer:**
 
 In Linux, these commands are commonly used for managing system resources, files, and directories. Each command serves a distinct purpose, as explained below:
 
