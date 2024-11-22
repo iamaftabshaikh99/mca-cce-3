@@ -65,7 +65,6 @@ This structure ensures that only authorized users can perform specific actions, 
 
 **Q2: Difference Between `sudo` and `root` in Linux?**
 
-**Elaborated Answer:**
 
 In Linux, both `root` and `sudo` are integral to system administration, but they serve different purposes and offer varying levels of control and security.
 
